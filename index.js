@@ -32,8 +32,8 @@ client.once("ready", async () => {
 client.on("interactionCreate", async interaction => {
   if (!interaction.isChatInputCommand()) return;
 
-  if (interaction.commandName === "ping") {
-    await interaction.reply("Pong!");
+  if (interaction.commandName === "Puerta") {
+    await interaction.reply("NO TENGO PUERTA");
   }
 });
 
