@@ -13,7 +13,7 @@ const client = new Client({
 const commands = [
   new SlashCommandBuilder()
     .setName("puerta")
-    .setDescription("No tengo puerta!")
+    .setDescription("Responde si tiene puerta")
 ].map(command => command.toJSON());
 
 const rest = new REST({ version: "10" }).setToken(process.env.TOKEN);
@@ -26,14 +26,14 @@ client.once("ready", async () => {
     { body: commands }
   );
 
-  console.log("Comando /ping registrado");
+  console.log("Comando /puerta registrado");
 });
 
 client.on("interactionCreate", async interaction => {
   if (!interaction.isChatInputCommand()) return;
 
-  if (interaction.commandName === "Puerta") {
-    await interaction.reply("NO TENGO PUERTA");
+  if (interaction.commandName === "puerta") {
+    await interaction.reply("no tengo puerta");
   }
 });
 
