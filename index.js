@@ -12,8 +12,8 @@ const client = new Client({
 
 const commands = [
   new SlashCommandBuilder()
-    .setName("ping")
-    .setDescription("Responde con Pong!")
+    .setName("puerta")
+    .setDescription("No tengo puerta!")
 ].map(command => command.toJSON());
 
 const rest = new REST({ version: "10" }).setToken(process.env.TOKEN);
